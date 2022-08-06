@@ -1,4 +1,4 @@
-# AWS-Based-Web-Scraping-Application-End-to-End
+# News Scraper (Postgres | AWS EC2 | Python)
 
 
 This project is a complete AWS based solution with the aim of scraping news article headlines from a website, storing them in a database and analyszing the results. 
