@@ -20,7 +20,7 @@ SQL, Python, AWS Cloud and shell scripting were used to create this data solutio
 
     * Next, we create a 'News' database.  
 
-2. The second part of this project is to create a small web scraping app using python and write the data to the 'News' table.   
+2. The second part of this project is to create a small [web scraping app](https://github.com/SuvanshVaid27/AWS-Based-Web-Scraping-Application-End-to-End-/blob/main/news-extract.py) using python and write the data to the 'News' table.   
 
      * A new table called 'crypto' is created first through pgAdmin, with the followig schema:
 
@@ -41,4 +41,4 @@ SQL, Python, AWS Cloud and shell scripting were used to create this data solutio
 
      * The app finally scrapes the news headlines realted to top 10 cryptocurrencies, cleans the data, and writes the resulting dataframe to the crypto table
 
-3.  The third and final part of this project shows how we can read data from the crypto table we created above and use efffecient aggregate queries to perform a simple exploratory analysis on the data. 
+3.  The third and final part of this project shows how we can read data from the crypto table we created above and use efffecient aggregate queries to perform a simple [exploratory analysis](https://github.com/SuvanshVaid27/AWS-Based-Web-Scraping-Application-End-to-End-/blob/main/news-analysis.ipynb) on the data. 
