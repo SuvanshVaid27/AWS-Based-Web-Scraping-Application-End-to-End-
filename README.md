@@ -5,7 +5,7 @@ This project is a complete AWS based solution with the aim of scraping news arti
 
 SQL, Python, AWS Cloud and shell scripting were used to create this data solution. The following steps describe the whole process in a simple manner:
 
-* Instal and setup a new postgres database into a T2.micro EC2 instance
+1. Instal and setup a new postgres database into a T2.micro EC2 instance
 
   1. The very first step was creating a [Free Tier t2.micro EC2 Linux instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
   While setting this up, the only change we have to make is in the security grouo where we have to allow public access for TCP over SSH connection (port 22) and TCP for PostgreSQL (port 5432). 
@@ -20,7 +20,7 @@ SQL, Python, AWS Cloud and shell scripting were used to create this data solutio
 
   6. Next, we create a 'News' database.  
 
-* The second part of this project is to create a small web scraping app using python and write the data to the 'News' table.   
+2. The second part of this project is to create a small web scraping app using python and write the data to the 'News' table.   
 
   1. A new table called 'crypto' is created first through pgAdmin, with the followig schema:
 
@@ -37,8 +37,8 @@ SQL, Python, AWS Cloud and shell scripting were used to create this data solutio
 
   2.  BeautifulSoup and Requests libraries from python were used to effectively scrape news article headlines from google news. Alternatively, there is another way to do so (through the pygooglenews package) which requires less lines of code and much more information. 
   
-  2. In the same app, the database creadentials are read through the dot-env file and sqlalchemy is then used to create a connection with the News database in our postgres server in EC2 instance. 
+  3. In the same app, the database creadentials are read through the dot-env file and sqlalchemy is then used to create a connection with the News database in our postgres server in EC2 instance. 
 
-  3. The app finally scrapes the news headlines realted to top 10 cryptocurrencies, cleans the data, and writes the resulting dataframe to the crypto table
+  4. The app finally scrapes the news headlines realted to top 10 cryptocurrencies, cleans the data, and writes the resulting dataframe to the crypto table
 
-* The third and final part of this project shows how we can read data from the crypto table we created above and use efffecient aggregate queries to perform a simple exploratory analysis on the data. 
+3.  The third and final part of this project shows how we can read data from the crypto table we created above and use efffecient aggregate queries to perform a simple exploratory analysis on the data. 
