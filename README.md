@@ -24,6 +24,7 @@ SQL, Python, AWS Cloud and shell scripting were used to create this data solutio
 
      * A new table called 'crypto' is created first through pgAdmin, with the followig schema:
 
+
      ```
      CREATE TABLE crypto (
       newsid INT GENERATED ALWAYS AS IDENTITY,
@@ -32,7 +33,6 @@ SQL, Python, AWS Cloud and shell scripting were used to create this data solutio
       source VARCHAR(100) NULL,
       time TIMESTAMP NULL
       );
-
      ```
 
      *  BeautifulSoup and Requests libraries from python were used to effectively scrape news article headlines from google news. Alternatively, there is another way to do so (through the pygooglenews package) which requires less lines of code and much more information. 
