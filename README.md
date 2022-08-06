@@ -22,23 +22,23 @@ SQL, Python, AWS Cloud and shell scripting were used to create this data solutio
 
 2. The second part of this project is to create a small web scraping app using python and write the data to the 'News' table.   
 
-  * A new table called 'crypto' is created first through pgAdmin, with the followig schema:
+     * A new table called 'crypto' is created first through pgAdmin, with the followig schema:
 
-  ```
-  CREATE TABLE crypto (
-   newsid INT GENERATED ALWAYS AS IDENTITY,
-   searchtopic VARCHAR(100) NOT NULL,
-   headline VARCHAR(500) NULL,
-   source VARCHAR(100) NULL,
-   time TIMESTAMP NULL
-   );
+     ```
+     CREATE TABLE crypto (
+      newsid INT GENERATED ALWAYS AS IDENTITY,
+      searchtopic VARCHAR(100) NOT NULL,
+      headline VARCHAR(500) NULL,
+      source VARCHAR(100) NULL,
+      time TIMESTAMP NULL
+      );
 
-  ```
+     ```
 
-  *  BeautifulSoup and Requests libraries from python were used to effectively scrape news article headlines from google news. Alternatively, there is another way to do so (through the pygooglenews package) which requires less lines of code and much more information. 
-  
-  * In the same app, the database creadentials are read through the dot-env file and sqlalchemy is then used to create a connection with the News database in our postgres server in EC2 instance. 
+     *  BeautifulSoup and Requests libraries from python were used to effectively scrape news article headlines from google news. Alternatively, there is another way to do so (through the pygooglenews package) which requires less lines of code and much more information. 
 
-  * The app finally scrapes the news headlines realted to top 10 cryptocurrencies, cleans the data, and writes the resulting dataframe to the crypto table
+     * In the same app, the database creadentials are read through the dot-env file and sqlalchemy is then used to create a connection with the News database in our postgres server in EC2 instance. 
+
+     * The app finally scrapes the news headlines realted to top 10 cryptocurrencies, cleans the data, and writes the resulting dataframe to the crypto table
 
 3.  The third and final part of this project shows how we can read data from the crypto table we created above and use efffecient aggregate queries to perform a simple exploratory analysis on the data. 
