@@ -6,9 +6,7 @@ This project is a complete AWS based solution with the aim of scraping news arti
 SQL, Python, AWS Cloud and shell scripting were used to create this data solution. The following steps describe the whole process in a simple manner:
 
 1. Install a new postgres database into a T3.micro EC2 instance
-
-  * The very first step was 
-
+   * The very first step was creating a Free Tier t2.micro EC2 Linux instance [Link](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
 
 2. Design and code a small scraping python app in vs code or similar
 3. Use the app to scrape 200+ news articles and inspect the data. More data fields
